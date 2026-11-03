@@ -25,6 +25,7 @@ public class Register {
     public ResponseEntity<String> register(@RequestBody Shuttles shut) {
         rs.registerbus(shut);
         return ResponseEntity.ok("Shuttle registered successfully");
+
     }
     @GetMapping("/all")
     public ResponseEntity<List<Shuttles>> all() {

@@ -9,14 +9,14 @@ public class Shuttles {
     @Column(name = "driver_name", length = 100, nullable = false)
     private String driver_name;
     @Column (name = "battery_pct", length = 100, nullable = false)
-    private String battery_pct;
+    private int battery_pct;
     @Enumerated(EnumType.STRING)
     private Status status;
 
     public Shuttles() {
     }
 
-    public Shuttles(String driver_name, String battery_pct, Status status) {
+    public Shuttles(String driver_name, int battery_pct, Status status) {
         super();
         this.driver_name = driver_name;
         this.battery_pct = battery_pct;
@@ -39,11 +39,11 @@ public class Shuttles {
         this.driver_name = driver_name;
     }
 
-    public String getBattery_pct() {
+    public int getBattery_pct() {
         return battery_pct;
     }
 
-    public void setBattery_pct(String battery_pct) {
+    public void setBattery_pct(int battery_pct) {
         this.battery_pct = battery_pct;
     }
 
